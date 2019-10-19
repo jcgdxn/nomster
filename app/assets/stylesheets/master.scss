@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
     background: image_url('vichy.png');
     font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -20,6 +22,13 @@ body {
 .navbar {
   background: image_url('triangle-mosiac.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {  
+  color: #F4FA7F;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 h1, h2, h3, h4, h5, h6 {
