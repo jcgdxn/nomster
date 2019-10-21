@@ -1,13 +1,19 @@
 
-<div class="booyah-box col-10 offset-1">
+    <div class="booyah-box col-6 offset-3">
     <h1>Enter Your Place Details</h1>
+    </div>
+
+    <div class="booyah-box col-6 offset-4">
     <%= simple_form_for @place do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :description %>
+    </div>
+
     <br />
-    <%= f.submit 'Create' %>
+    
+    <div class="booyah-box col-6 offset-3">
     <%= f.submit 'Create', class: 'btn btn-primary' %>
+  </div>
   <% end %>
 
-</div>
