@@ -31,7 +31,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
 
     if @places.user !=current_user
-        return render plain: 'Not Permitted!!!', status: :forbidden
+        return render plain: 'Not Allowed', status: :forbidden
     end
   end
 
@@ -39,7 +39,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     
       if @place.user != current_user
-        return render plain: 'Not Permitted!!!', status: :forbidden
+        return render plain: 'Not Allowed', status: :forbidden
       end
 
       @place.update_attributes(place_params)
@@ -69,4 +69,3 @@ class PlacesController < ApplicationController
 
   end
 
-end
