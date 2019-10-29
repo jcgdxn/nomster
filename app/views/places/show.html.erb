@@ -13,9 +13,7 @@
               padding: 0;
               }
             #map {
-              
               height: 300px;
-
             }
         </style>
           
@@ -36,31 +34,31 @@
                     map: map,
                     title: 'Hello World!'
                   });
-                }
+            }
+
         </script>
 
 
-  <script async defer
+                  <script async defer
 
-  src="https://maps.googleapis.com/maps/api/geocode/js?key=AIzaSyB0kmDopziYcGnZfrTCw8SDNnijHWwVYqI&callback=initMap">
+                  src="https://maps.googleapis.com/maps/api/geocode/js?key=AIzaSyB0kmDopziYcGnZfrTCw8SDNnijHWwVYqI&callback=initMap">
 
-  </script>
+                  </script>
 
-    <div id="map"></div>
+          <div id="map"></div>        
 
-  <% end %>
-
-  <br />
+      <br />
 
     <div class='float-right'>
 
         <% if current_user && current_user == @place.user %>
 
-            <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-        
-            <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
+        <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
 
-        <% end %>
+        <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
+
+      <% end %> 
+      <% end %>
 
     </div>
 </div>
