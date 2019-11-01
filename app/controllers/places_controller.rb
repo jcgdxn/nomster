@@ -2,7 +2,6 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    #@places = places.order("name").page(params[:page])
     @places = Place.all
   end
 
@@ -18,11 +17,21 @@ class PlacesController < ApplicationController
       else
         render :new, status: :unprocessable_entity
       end
+
+
+    @photo = current_user.places.create(place_params)
+      if @place.valid?
+        redirect_to place_path(@place)
+      else
+        render  :new, status: :unprocessable_entity
+      end  
+    
   end
 
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
+    @photo = Photo.new
   end
 
   def edit
@@ -63,9 +72,9 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-
+    #@places = places.order("name").page(params[:page])
     params.require(:place).permit(:name, :description, :address)  
 
   end
 
-end #class 
+end 
