@@ -72,7 +72,7 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    #@places = places.order("name").page(params[:page])
+    
     params.require(:place).permit(:name, :description, :address)  
 
   end
