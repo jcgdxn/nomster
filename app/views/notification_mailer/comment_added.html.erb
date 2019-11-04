@@ -1,10 +1,17 @@
 
 
+def comment_added(comment)
+  @place = comment.place
+  @place_owner = @place.user
+  mail(to: @place_owner.email,
+  
+    subject: "A comment arrived on #{@place.name}"
+
 <p> Hey there !</p>
 <p>
 
     Congrats !! <b> A comment has been addded on your site within Nomster</b>
-
+    Check it out <%= link_to 'here', place_url(@place) %>.
 </p>
 
 Cheers, <br />

@@ -4,13 +4,14 @@ def comment_added(comment)
   @place_owner = @place.user
   mail(to: @place_owner.email,
   
-  mail(to: "hqcntrl@gmail.com"
-      subject: "A comment has been added to your place")
+        subject: "A comment has been added to #{@place.name}")
 
 
 Greetings !!
 
 Congrats !! A comment has been added on Nomster to one of your sites!!!
+
+Check it out, <%= place_url(@place) %>
 
 Cheers, 
 Adminster 
