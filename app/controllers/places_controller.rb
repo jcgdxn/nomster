@@ -18,13 +18,7 @@ class PlacesController < ApplicationController
         render :new, status: :unprocessable_entity
       end
 
-
-    @photo = current_user.places.create(place_params)
-      if @place.valid?
-        redirect_to place_path(@place)
-      else
-        render  :new, status: :unprocessable_entity
-      end  
+  
     
   end
 

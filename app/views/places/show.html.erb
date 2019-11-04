@@ -134,21 +134,12 @@
 <h2>Photos</h2>
         <%= @place.photos.each do |photo| %>
           <div class="col-12 col-sm-6">
-          <%= image_tag '*.jpg', class: 'img_file_tagged' %>
-            <% f.input :picture %>
+          <%= photo.caption %>
+          <%= image_tag photo.picture.to_s, class: 'img_file_tagged' %>
+           
           </div>
 
-<h3>Captions</h3>
-        <% @place.photos.each do |photo| %>
-              <div class="col-12 col-sm-6">
-                <blockquote>
-                  <%= photo.caption %>
-                  <small><%= caption.user.email %></small>
-                </blockquote>
-              </div>
 
-
-    <% end %>
   <% end %>
   
 </div>
