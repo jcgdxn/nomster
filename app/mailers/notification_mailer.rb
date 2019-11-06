@@ -8,8 +8,7 @@ class NotificationMailer < ApplicationMailer
 
       mail(to: @place_owner.email,
 
-        Subject: "A comment has been added #{{@place.name}")
+        Subject: "A comment has been added #{@place.name}")
 
-    
-  end
+    end
 end
