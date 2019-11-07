@@ -1,0 +1,4 @@
+
+
+<h2><%= @user.email %></h2>
+<h3>Member Since: <%= @user.created_at %></h3>
